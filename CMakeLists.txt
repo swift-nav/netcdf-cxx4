@@ -616,6 +616,7 @@ INSTALL(PROGRAMS ${NCXX_BINARY_DIR}/ncxx4-config
 # End ncxx4-config section
 #####
 
+IF(NCXX_ENABLE_TESTS)
 #####
 # Build test_common.sh
 #####
@@ -623,6 +624,7 @@ SET(EXTRA_DIST ${EXTRA_DIST} ${CMAKE_SOURCE_DIR}/test_common.in)
 SET(TOPSRCDIR "${CMAKE_SOURCE_DIR}")
 SET(TOPBUILDDIR "${CMAKE_BINARY_DIR}")
 configure_file(${CMAKE_SOURCE_DIR}/test_common.in ${CMAKE_BINARY_DIR}/test_common.sh @ONLY NEWLINE_STYLE LF)
+ENDIF()
 
 #####
 # Options
